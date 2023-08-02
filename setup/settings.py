@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pontosturisticos',
     'atracoes',
     'comentarios',
+    'avaliacoes',
 ]
 
 MIDDLEWARE = [
