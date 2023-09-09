@@ -1,3 +1,4 @@
+from rest_framework.filters import SearchFilter
 from rest_framework.viewsets import ModelViewSet
 from pontosturisticos.models import PontoTuristico
 from .serializers import PontoTuristicoSerializer
@@ -5,6 +6,8 @@ from .serializers import PontoTuristicoSerializer
 class PontoTuristicoViewSet(ModelViewSet):
     queryset = PontoTuristico.objects.all()
     serializer_class = PontoTuristicoSerializer
+    filter_backends = (SearchFilter, )
+    search_fields = ('name', 'id', 'descricao')
 
     # def get_queryset(self):
     #     return PontoTuristico.objects.all()
