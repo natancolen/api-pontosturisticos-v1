@@ -2,7 +2,29 @@ from rest_framework.viewsets import ModelViewSet
 from pontosturisticos.models import PontoTuristico
 from .serializers import PontoTuristicoSerializer
 
-
 class PontoTuristicoViewSet(ModelViewSet):
-    queryset = PontoTuristico.objects.all()
+    # queryset = PontoTuristico.objects.all()
     serializer_class = PontoTuristicoSerializer
+
+    def get_queryset(self):
+        return PontoTuristico.objects.all()
+
+    def list(self, request, *args, **kwargs):
+        return super(PontoTuristicoViewSet, self).list(request, *args, **kwargs)
+
+    def create(self, request, *args, **kwargs):
+        return super(PontoTuristicoViewSet, self).create(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        return super(PontoTuristicoViewSet, self).destroy(request, *args, **kwargs)
+
+    def retrieve(self, request, *args, **kwargs):
+        return super(PontoTuristicoViewSet, self).retrieve(request, *args, **kwargs)
+
+    def update(self, request, *args, **kwargs):
+        return super(PontoTuristicoViewSet, self).update(request, *args, **kwargs)
+
+    def partial_update(self, request, *args, **kwargs):
+        return super(PontoTuristicoViewSet, self).partial_update(request, *args, **kwargs)
+
+
