@@ -7,7 +7,8 @@ class PontoTuristicoViewSet(ModelViewSet):
     queryset = PontoTuristico.objects.all()
     serializer_class = PontoTuristicoSerializer
     filter_backends = (SearchFilter, )
-    search_fields = ('name', 'id', 'descricao')
+    search_fields = ('nome', 'id', 'descricao')
+    lookup_field = 'nome'
 
     # def get_queryset(self):
     #     return PontoTuristico.objects.all()
