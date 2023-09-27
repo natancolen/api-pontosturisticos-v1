@@ -6,4 +6,4 @@ class AvaliacaoSerializer(ModelSerializer):
 
     class Meta:
         model = Avaliacao
-        field = '__all__'
+        fields = '__all__'

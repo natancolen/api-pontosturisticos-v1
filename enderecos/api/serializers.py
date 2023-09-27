@@ -5,4 +5,7 @@ from enderecos.models import Endereco
 class EnderecoSerializer(ModelSerializer):
     class Meta:
         model = Endereco
-        field = '__all__'
+        fields = '__all__'
+        # fields = ('linha1', 'linha2',
+        #          'cidade', 'estado',
+        #          'pais', 'latitude', 'longitude')

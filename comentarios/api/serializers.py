@@ -6,4 +6,4 @@ class ComentarioSerializer(ModelSerializer):
 
     class Meta:
         model = Comentario
-        field = '__all__'
+        fields = '__all__'

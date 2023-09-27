@@ -1,4 +1,6 @@
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.filters import SearchFilter
+from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 from pontosturisticos.models import PontoTuristico
 from .serializers import PontoTuristicoSerializer
@@ -7,7 +9,9 @@ class PontoTuristicoViewSet(ModelViewSet):
     queryset = PontoTuristico.objects.all()
     serializer_class = PontoTuristicoSerializer
     filter_backends = (SearchFilter, )
-    search_fields = ('nome', 'id', 'descricao')
+    # permission_classes = (IsAuthenticated)
+    authentication_classes = (TokenAuthentication,)
+    search_fields = ('nome', 'id', 'descricao', 'endereco__linha1')
     lookup_field = 'nome'
 
     # def get_queryset(self):
