@@ -8,10 +8,10 @@ from pontosturisticos.models import PontoTuristico
 
 
 class PontoTuristicoSerializer(ModelSerializer):
-    atracoes = AtracaoSerializer(many=True)
-    comentarios = ComentarioSerializer(many=True)
-    avaliacoes = AvaliacaoSerializer(many=True)
-    endereco = EnderecoSerializer()
+    # atracoes = AtracaoSerializer(many=True)
+    # comentarios = ComentarioSerializer(many=True)
+    # avaliacoes = AvaliacaoSerializer(many=True)
+    # endereco = EnderecoSerializer()
     class Meta:
         model = PontoTuristico
         fields = '__all__'
