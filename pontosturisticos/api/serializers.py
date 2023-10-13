@@ -14,7 +14,7 @@ class PontoTuristicoSerializer(ModelSerializer):
     endereco = EnderecoSerializer()
     class Meta:
         model = PontoTuristico
-        # fields = '__all__'
-        fields = ('nome', 'descricao', 'aprovado',
-                  'atracoes','comentarios','avaliacoes',
-                  'endereco')
+        fields = '__all__'
+        # fields = ('nome', 'descricao', 'aprovado',
+        #           'atracoes','comentarios','avaliacoes',
+        #           'endereco')
